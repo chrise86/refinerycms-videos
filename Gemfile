@@ -4,13 +4,18 @@ gemspec
 
 
 # Lock the project to a version before some breaking changes.
-git 'git://github.com/resolve/refinerycms.git', :ref => "a82690e9a376757ca8ece27343eb96e4f07108f7" do
-  gem 'refinerycms'
+#git 'git://github.com/resolve/refinerycms.git', :ref => "a82690e9a376757ca8ece27343eb96e4f07108f7" do
+#  gem 'refinerycms'
 
-  group :development, :test do
-    gem 'refinerycms-testing'
-  end
-end
+#  group :development, :test do
+#    gem 'refinerycms-testing'
+#  end
+#end
+
+gem 'refinerycms', :git => 'git://github.com/resolve/refinerycms.git'
+gem 'refinerycms-i18n', :git => 'git://github.com/parndt/refinerycms-i18n.git'
+gem 'refinerycms-settings', :git => 'git://github.com/parndt/refinerycms-settings.git'
+
 
 # Refinery/rails should pull in the proper versions of these
 group :assets do
