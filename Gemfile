@@ -14,7 +14,6 @@ gemspec
 
 gem 'refinerycms', :git => 'git://github.com/resolve/refinerycms.git'
 gem 'refinerycms-i18n', :git => 'git://github.com/parndt/refinerycms-i18n.git'
-gem 'refinerycms-settings', :git => 'git://github.com/parndt/refinerycms-settings.git'
 
 
 # Refinery/rails should pull in the proper versions of these
@@ -52,8 +51,8 @@ group :development, :test do
   end
 
   platforms :ruby do
-    gem 'spork', '0.9.0.rc9'
-    gem 'guard-spork'
+    gem 'spork'
+    gem 'guard-spork', '~> 1.1.0'
 
     unless ENV['TRAVIS']
       if RbConfig::CONFIG['target_os'] =~ /darwin/i
@@ -61,9 +60,9 @@ group :development, :test do
         gem 'growl',      '~> 1.0.3'
       end
       if RbConfig::CONFIG['target_os'] =~ /linux/i
-        gem 'rb-inotify', '>= 0.5.1'
-        gem 'libnotify',  '~> 0.1.3'
-        gem 'therubyracer', '~> 0.9.9'
+        gem 'rb-inotify', '~> 0.8.8'
+        gem 'libnotify',  '~> 0.7.4'
+        gem 'therubyracer', '~> 0.10.1'
       end
     end
   end
