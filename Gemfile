@@ -12,8 +12,8 @@ gemspec
 #  end
 #end
 
-gem 'refinerycms', :git => 'git://github.com/resolve/refinerycms.git'
-gem 'refinerycms-i18n', :git => 'git://github.com/parndt/refinerycms-i18n.git'
+#gem 'refinerycms', :git => 'git://github.com/resolve/refinerycms.git'
+#gem 'refinerycms-i18n', :git => 'git://github.com/parndt/refinerycms-i18n.git'
 
 
 # Refinery/rails should pull in the proper versions of these
