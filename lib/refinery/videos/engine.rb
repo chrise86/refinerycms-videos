@@ -52,10 +52,10 @@ module Refinery
         ActionView::Base.send :include, RawVideosHelper
       end
 
-      config.after_initialize do
+      initializer "register refinerycms_videos" do
         Refinery::Plugin.register do |plugin|
           plugin.name = "refinerycms_videos"
-          plugin.url = { :controller => "/refinery/admin/raw_videos" }
+          plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.videos_admin_root }
           plugin.menu_match = /^\/?(admin|refinery)\/videos/
           plugin.activity = {
             :class_name => :'refinery/raw_video',
@@ -74,7 +74,9 @@ module Refinery
             tab.partial = "/refinery/admin/pages/tabs/videos"
           end
         end
+      end
 
+      config.after_initialize do
         Refinery.register_engine(Refinery::Videos)
       end
 
