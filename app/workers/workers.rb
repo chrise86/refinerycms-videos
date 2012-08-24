@@ -1,1 +1,1 @@
-require File.join(File.dirname(__FILE__), 'refinery', 'encode_video')
+require File.join(File.dirname(__FILE__), 'refinery', 'videos', 'encode_video')

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Refinery
+module Refinery::Videos
   describe EncodedVideo do
     subject { FactoryGirl.create(:encoded_video) }
     

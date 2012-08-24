@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Refinery
+module Refinery::Videos
   describe Page do
     it "can have videos added" do
       page = Factory(:page)

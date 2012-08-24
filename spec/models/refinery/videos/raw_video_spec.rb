@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Refinery
+module Refinery::Videos
   describe RawVideo do
     subject { FactoryGirl.create(:raw_video) }
     

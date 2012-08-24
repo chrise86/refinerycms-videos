@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Refinery
+module Refinery::Videos
   module Admin
     describe 'RawVideos' do
       login_refinery_user
