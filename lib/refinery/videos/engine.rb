@@ -55,7 +55,7 @@ module Refinery
       initializer "register refinerycms_videos" do
         Refinery::Plugin.register do |plugin|
           plugin.name = "refinerycms_videos"
-          plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.videos_admin_root_path }
+          plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.videos_admin_raw_videos_path }
           plugin.menu_match = /^\/?(admin|refinery)\/videos/
           plugin.activity = {
             :class_name => :'refinery/raw_video',
