@@ -2,8 +2,8 @@ module Refinery
   module Videos
     module Extension
       def has_many_page_videos
-        has_many :page_videos, :as => :page, :order => 'position ASC'
-        has_many :videos, :through => :page_videos, :order => 'position ASC'
+        has_many :page_videos, :as => :page, :order => 'position ASC', :class_name => "::Refinery::Videos::PageVideo"
+        has_many :videos, :through => :page_videos, :order => 'position ASC', :class_name => "::Refinery::Videos::PageVideo"
 
         # accepts_nested_attributes_for MUST come before def videos_attributes=
         # this is because videos_attributes= overrides accepts_nested_attributes_for.

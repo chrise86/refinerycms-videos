@@ -3,7 +3,7 @@ module Refinery
     class PageVideo < ActiveRecord::Base
 
       belongs_to :video, :foreign_key => 'raw_video_id', :class_name => '::Refinery::RawVideo'
-      belongs_to :page, :polymorphic => true
+      belongs_to :page, :polymorphic => true, :class_name => '::Refinery::Page'
 
       translates :caption if self.respond_to?(:translates)
 
