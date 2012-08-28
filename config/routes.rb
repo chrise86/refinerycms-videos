@@ -5,8 +5,8 @@ Refinery::Core::Engine.routes.draw do
   end
   
   
-  namespace :videos, :as => "refinery" do
-    namespace :admin, :as => "videos" do
+  namespace :videos, :path => "refinery" do
+    namespace :admin, :path => "videos" do
       root :to => "raw_videos#index"
         
       resources :raw_videos, :except => :show do
