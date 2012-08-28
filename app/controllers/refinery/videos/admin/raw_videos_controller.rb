@@ -5,7 +5,7 @@ module Refinery
 
         respond_to :html
 
-        crudify :'refinery/raw_video',
+        crudify :'refinery/videos/raw_video',
                 :title_attribute => 'title',
                 :searchable => true,
                 :sortable => false

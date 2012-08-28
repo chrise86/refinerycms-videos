@@ -1,13 +1,13 @@
 <div class='wym_skin_refinery page_part' id='page_video_picker'>
-  <%= render '/refinery/admin/pages/tabs/videos_bar', :f => f %>
-  <%= render '/refinery/admin/pages/tabs/videos_field', :f => f %>
+  <%= render '/refinery/videos/admin/pages/tabs/videos_bar', :f => f %>
+  <%= render '/refinery/videos/admin/pages/tabs/videos_field', :f => f %>
 </div>
 
 <% content_for :stylesheets do %>
-  <%= stylesheet_link_tag 'refinery/admin/page-video-picker' %>
+  <%= stylesheet_link_tag 'refinery/videos/admin/page-video-picker' %>
 <% end %>
 
 <% content_for :javascripts do %>
-  <%= javascript_include_tag 'refinery/admin/page-video-picker' %>
-  <%= javascript_include_tag 'refinery/admin/video-embed' %>
+  <%= javascript_include_tag 'refinery/videos/admin/page-video-picker' %>
+  <%= javascript_include_tag 'refinery/videos/admin/video-embed' %>
 <% end %>
