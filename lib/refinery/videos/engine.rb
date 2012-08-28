@@ -65,13 +65,13 @@ module Refinery
 
         ::Refinery::Pages::Tab.register do |tab|
           tab.name = "videos"
-          tab.partial = "/refinery/admin/pages/tabs/videos"
+          tab.partial = "/refinery/videos/admin/pages/tabs/videos"
         end
 
         if defined?(::Refinery::Blog::Tab)
           ::Refinery::Blog::Tab.register do |tab|
             tab.name = "videos"
-            tab.partial = "/refinery/admin/pages/tabs/videos"
+            tab.partial = "/refinery/videos/admin/pages/tabs/videos"
           end
         end
       end
