@@ -6,7 +6,8 @@ module Refinery
     class Engine < Rails::Engine
       include Refinery::Engine
 
-      isolate_namespace Refinery
+      isolate_namespace Refinery::Videos
+      
       engine_name :refinery_videos
 
       initializer 'videos-with-dragonfly', :before => :load_config_initializers do |app|

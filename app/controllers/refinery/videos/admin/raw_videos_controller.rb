@@ -1,5 +1,3 @@
-require 'crud_monkey_patch'
-
 module Refinery
   module Videos
     module Admin
