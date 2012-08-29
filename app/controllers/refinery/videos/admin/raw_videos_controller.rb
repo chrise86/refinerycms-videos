@@ -27,7 +27,7 @@ module Refinery
             flash[:notice] = t('encoding', :scope => 'refinery.admin.raw_videos', :title => @raw_video.title)
           end
 
-          respond_with [:refinery_admin, @raw_video], :location => main_app.refinery_admin_raw_videos_path
+          respond_with [:refinery_admin, @raw_video], :location => refinery.videos_admin_raw_videos_path
         end
         alias_method :upload, :create
 
@@ -35,7 +35,7 @@ module Refinery
         def insert
           self.new if @raw_video.nil?
 
-          @url_override = main_app.refinery_admin_raw_videos_path(request.query_parameters.merge(:insert => true))
+          @url_override = refinery.videos_admin_raw_videos_path(request.query_parameters.merge(:insert => true))
 
           if params[:conditions].present?
             extra_condition = params[:conditions].split(',')

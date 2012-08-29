@@ -1,11 +1,11 @@
 <% opts = if @raw_video.new_record?
-    { :url => main_app.upload_refinery_admin_raw_videos_path, 
+    { :url => refinery.upload_videos_admin_raw_videos_path,
       :html => { :method => :post, :multipart => true }}
   else
     {:html => {:method => :put}}
   end
 %>
-<%= form_for [main_app, :refinery_admin, @raw_video], opts do |f| -%>
+<%= form_for [refinery, :refinery_admin, @raw_video], opts do |f| -%>
   <%= render :partial => "/refinery/admin/error_messages", :locals => {
           :object => @raw_video,
           :include_object_name => true

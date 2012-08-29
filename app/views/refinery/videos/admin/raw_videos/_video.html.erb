@@ -5,11 +5,11 @@
   </span>
   <span class='actions'>
     <% if video.encoded? %>
-      <%= link_to refinery_icon_tag("application_go.png"), main_app.raw_video_path(video),
+      <%= link_to refinery_icon_tag("application_go.png"), refinery.videos_raw_video_path(video),
           :title => t('.view_live_html'),
           :target => "_blank" %>
-      <%= link_to refinery_icon_tag("application_edit.png"), main_app.edit_refinery_admin_raw_video_path(video), :title => t('.edit') %>
-      <%= link_to refinery_icon_tag("delete.png"), main_app.refinery_admin_raw_video_path(video),
+      <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_videos_admin_raw_video_path(video), :title => t('.edit') %>
+      <%= link_to refinery_icon_tag("delete.png"), refinery.videos_admin_raw_video_path(video),
           :class => "cancel confirm-delete",
           :title => t('.delete'),
           :confirm => t('message', :scope => 'refinery.admin.delete', :title => video.name),

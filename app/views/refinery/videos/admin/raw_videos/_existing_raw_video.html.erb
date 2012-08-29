@@ -1,6 +1,6 @@
 <div id='existing_video_area' class='dialog_area' <%= "style='display:none;'" if @raw_video.errors.any? %>>
   <%= render :partial => '/refinery/admin/search',
-             :locals => {:url => main_app.insert_refinery_admin_raw_videos_path(params.dup.delete(:video))} %>
+             :locals => {:url => refinery.insert_videos_admin_raw_videos_path(params.dup.delete(:video))} %>
   <input type='hidden' name='selected_video' id='selected_video' />
   <div id='existing_video_area_content' class='clearfix'>
 <% if @raw_videos.any? %>
