@@ -1,5 +1,5 @@
 <ul>
-  <% if ::Refinery::Admin::RawVideosController.searchable? %>
+  <% if ::Refinery::Videos::Admin::RawVideosController.searchable? %>
     <li>
       <%= render :partial => "/refinery/admin/search",
                   :locals => {
