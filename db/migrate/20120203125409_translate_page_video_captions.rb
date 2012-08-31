@@ -1,10 +1,10 @@
 class TranslatePageVideoCaptions < ActiveRecord::Migration
   def up
-    add_column Refinery::PageVideo.table_name, :id, :primary_key
+    add_column Refinery::Videos::PageVideo.table_name, :id, :primary_key
 
-    Refinery::PageVideo.reset_column_information
-    unless defined?(Refinery::PageVideo::Translation) && Refinery::PageVideo::Translation.table_exists?
-      Refinery::PageVideo.create_translation_table!({
+    Refinery::Videos::PageVideo.reset_column_information
+    unless defined?(Refinery::Videos::PageVideo::Translation) && Refinery::Videos::PageVideo::Translation.table_exists?
+      Refinery::Videos::PageVideo.create_translation_table!({
         :caption => :text
       }, {
         :migrate_data => true
@@ -13,10 +13,10 @@ class TranslatePageVideoCaptions < ActiveRecord::Migration
   end
 
   def down
-    Refinery::PageVideo.reset_column_information
+    Refinery::Videos::PageVideo.reset_column_information
 
-    Refinery::PageVideo.drop_translation_table! :migrate_data => true
+    Refinery::Videos::PageVideo.drop_translation_table! :migrate_data => true
 
-    remove_column Refinery::PageVideo.table_name, :id
+    remove_column Refinery::Videos::PageVideo.table_name, :id
   end
 end

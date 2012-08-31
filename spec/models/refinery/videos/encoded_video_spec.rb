@@ -26,7 +26,7 @@ module Refinery::Videos
         raw_videos = subject.class.by_format('mp4')
 
         raw_videos.should be_a(ActiveRecord::Relation)
-        raw_videos.first.should be_a(Refinery::EncodedVideo)
+        raw_videos.first.should be_a(Refinery::Videos::EncodedVideo)
         raw_videos.first.format.should == 'mp4'
       end
     end

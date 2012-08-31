@@ -7,7 +7,7 @@ module Refinery::Videos
       
       describe "list videos" do
         context "when no videos" do
-          before(:each) { Refinery::RawVideo.delete_all }
+          before(:each) { Refinery::Videos::RawVideo.delete_all }
           
           it "invites to add one" do
             visit refinery_admin_raw_videos_path

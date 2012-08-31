@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :encoded_video, :class => Refinery::EncodedVideo do
+  factory :encoded_video, :class => Refinery::Videos::EncodedVideo do
     file Refinery::Videos::Engine.root.join("spec/samples/test-movie.mov")
     format 'mp4'
     

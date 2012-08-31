@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :raw_video, :class => Refinery::RawVideo, :aliases => [:video] do
+  factory :raw_video, :class => Refinery::Videos::RawVideo, :aliases => [:video] do
     file Refinery::Videos::Engine.root.join("spec/samples/test-movie.mov")
     association :poster_image, :factory => :image
     

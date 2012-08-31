@@ -23,7 +23,7 @@ module Refinery
       class << self
 
         # will-paginate default videos per page. To override this setting: 
-        #   Refinery::RawVideo.per_page = num
+        #   Refinery::Videos::RawVideo.per_page = num
         per_page = 12
 
         def create_video(params)

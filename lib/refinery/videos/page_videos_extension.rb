@@ -20,7 +20,7 @@ module Refinery
               self.page_videos
             else
               self.page_videos.where(
-                Refinery::PageVideo.arel_table[:id].not_in(ids_to_keep)
+                Refinery::Videos::PageVideo.arel_table[:id].not_in(ids_to_keep)
               )
             end
 
