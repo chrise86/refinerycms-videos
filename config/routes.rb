@@ -9,7 +9,7 @@ Refinery::Core::Engine.routes.draw do
     namespace :admin, :path => "videos" do
       root :to => "raw_videos#index"
         
-      resources :raw_videos, :except => :show do
+      resources :raw_videos, :path => '', :except => :show do
         collection do
           get :insert
           get :embed
