@@ -5,7 +5,7 @@
     {:html => {:method => :put}}
   end
 %>
-<%= form_for [refinery, :refinery_admin, @raw_video], opts do |f| -%>
+<%= form_for [refinery, :videos_admin, @raw_video], opts do |f| -%>
   <%= render :partial => "/refinery/admin/error_messages", :locals => {
           :object => @raw_video,
           :include_object_name => true

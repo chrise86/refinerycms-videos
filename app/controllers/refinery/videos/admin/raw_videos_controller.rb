@@ -25,7 +25,7 @@ module Refinery
             flash[:notice] = t('encoding', :scope => 'refinery.admin.raw_videos', :title => @raw_video.title)
           end
 
-          respond_with [:refinery_admin, @raw_video], :location => refinery.videos_admin_raw_videos_path
+          respond_with [:videos_admin, @raw_video], :location => refinery.videos_admin_raw_videos_path
         end
         alias_method :upload, :create
 
