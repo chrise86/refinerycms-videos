@@ -1,20 +1,20 @@
 <% content_for :stylesheets do %>
-<%= stylesheet_link_tag "refinery/admin/upload_progress" %>
+<%= stylesheet_link_tag "refinery/videos/admin/upload_progress" %>
 <% end %>
 <% content_for :javascripts do %>
-<%= javascript_include_tag "refinery/admin/videos" %>
+<%= javascript_include_tag "refinery/videos/admin/videos" %>
 <script type="text/javascript">
   $(function() {
     $('form').uploadProgress({
-  		jqueryPath: '<%= asset_path "jquery.js" %>',
-  		uploadProgressPath: '<%= asset_path "jquery.uploadProgress.js" %>',
-  		uploading: function(upload) {
-  		  $('#percents').html(upload.percents+'%');
-  		},
-  		progressBar: "#progressbar",
-  		progressUrl: '<%= Refinery::Videos.upload_progress_uri %>',
-  		interval: 2000,
-  		dataType: 'json'
+      jqueryPath: '<%= asset_path "jquery.js" %>',
+      uploadProgressPath: '<%= asset_path "jquery.uploadProgress.js" %>',
+      uploading: function(upload) {
+        $('#percents').html(upload.percents+'%');
+      },
+      progressBar: "#progressbar",
+      progressUrl: '<%= Refinery::Videos.upload_progress_uri %>',
+      interval: 2000,
+      dataType: 'json'
     });
   });
 </script>
