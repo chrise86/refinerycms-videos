@@ -59,7 +59,7 @@ module Refinery
           plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.videos_admin_root_path }
           plugin.menu_match = /^\/?(admin|refinery)\/videos/
           plugin.activity = {
-            :class_name => :'refinery/raw_video',
+            :class_name => :'refinery/videos/raw_video',
             :title => 'name'
           }
         end
